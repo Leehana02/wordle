@@ -7,9 +7,11 @@ header {
 .header-top {
   display: flex;
   justify-content: space-between;
+  align-items: conter;
 }
 
 .header-top img {
+  margin-top: 10px;
   width: 50px;
 }
 
