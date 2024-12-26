@@ -1,0 +1,20 @@
+header {
+  margin-top: 10px;
+  border-bottom: 3px solid #ededef;
+  padding-bottom: 10px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-top img {
+  width: 50px;
+}
+
+.header-top__title {
+  font-size: 50px;
+  font: bold;
+  padding-left: 150px;
+}

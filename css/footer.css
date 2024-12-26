@@ -1,0 +1,60 @@
+footer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.keyboard-row {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.keyboard-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #d3d6da;
+  border-radius: 5px;
+  width: 40px;
+  height: 60px;
+  background-color: #d3d6da;
+  font: bold;
+  font-size: 20px;
+}
+
+.keyboard-block__wide {
+  position: relative;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3d6da;
+  font: bold;
+  font-size: 15px;
+  width: 80px;
+  height: 60px;
+}
+
+.back-space-icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.back-space-icon img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
