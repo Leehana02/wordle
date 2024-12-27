@@ -12,18 +12,21 @@ function appStart() {
       "display:flex; justify-content:center; align-items:center; position:absolute; top:40vh; left:45vw; background-color:white; width:200px; height: 100px";
     document.body.appendChild(div);
   };
-  const nextLine = () => {
-    if (attempts === 6) return Gameover();
-    attempts += 1;
-    index = 0;
-  };
   const Gameover = () => {
     window.removeEventListener("keydown", handlekeydown);
     dispalyGameover();
     clearInterval(timer);
   };
-  const handleEnterkey = () => {
+  const nextLine = () => {
+    if (attempts === 6) return Gameover();
+    attempts += 1;
+    index = 0;
+  };
+  const handleEnterkey = async () => {
     let 맞은_갯수 = 0;
+    const 응답 = await fetch("/answer");
+    const 정답 = await 응답.json();
+
     for (let i = 0; i < 5; i++) {
       const block = document.querySelector(
         `.board-block[data-index='${attempts}${i}']`
@@ -69,6 +72,11 @@ function appStart() {
       index += 1;
     }
   };
+  // const keyClick = (event) => {
+  //   const cilck = event.cilck;
+  //   const clickBlock = document.querySelector("keyboard-block[data-key='Q']");
+  //   clickBlock.innerText = cilck;
+  // };
 
   const startTimer = () => {
     const 시작_시간 = new Date();
@@ -85,6 +93,7 @@ function appStart() {
   };
 
   startTimer();
+  // window.addEventListener("cilck", keyClick);
   window.addEventListener("keydown", handlekeydown);
 }
 
