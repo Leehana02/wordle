@@ -12,13 +12,13 @@ function appStart() {
       "display:flex; justify-content:center; align-items:center; position:absolute; top:40vh; left:45vw; background-color:white; width:200px; height: 100px";
     document.body.appendChild(div);
   };
-  const Gameover = () => {
+  const gameover = () => {
     window.removeEventListener("keydown", handlekeydown);
     dispalyGameover();
     clearInterval(timer);
   };
   const nextLine = () => {
-    if (attempts === 6) return Gameover();
+    if (attempts === 6) return gameover();
     attempts += 1;
     index = 0;
   };
@@ -42,7 +42,7 @@ function appStart() {
       block.style.color = "white";
     }
 
-    if (맞은_갯수 === 5) Gameover();
+    if (맞은_갯수 === 5) gameover();
     else nextLine();
   };
 
@@ -72,11 +72,6 @@ function appStart() {
       index += 1;
     }
   };
-  // const keyClick = (event) => {
-  //   const cilck = event.cilck;
-  //   const clickBlock = document.querySelector("keyboard-block[data-key='Q']");
-  //   clickBlock.innerText = cilck;
-  // };
 
   const startTimer = () => {
     const 시작_시간 = new Date();
@@ -93,7 +88,6 @@ function appStart() {
   };
 
   startTimer();
-  // window.addEventListener("cilck", keyClick);
   window.addEventListener("keydown", handlekeydown);
 }
 

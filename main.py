@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
-answer='SUNNY'
+answer='APPLE'
 
 @app.get('/answer')
 def get_answer():
